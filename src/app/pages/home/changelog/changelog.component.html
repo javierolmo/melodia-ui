@@ -1,0 +1,12 @@
+<nb-card size="giant">
+  <nb-card-header>Changelog</nb-card-header>
+  <nb-card-body>
+    <div *ngFor="let release of releases">
+      <h6>Versión {{release.version}} ({{release.date}})</h6>
+      <ul *ngFor="let new of release.news">
+        <li>{{new}}</li>
+      </ul>
+      <hr>
+    </div>
+  </nb-card-body>
+</nb-card>
