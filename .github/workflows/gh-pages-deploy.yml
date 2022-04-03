@@ -11,6 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '12'
+          cache: 'npm'
+
       - name: Build Angular application and publish
         uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
         with:
