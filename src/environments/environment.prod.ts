@@ -5,7 +5,7 @@
  */
 export const environment = {
   production: true,
-  apiUrl: 'https://melodia-appservice.azurewebsites.net',
+  apiUrl: 'http://pfg-uned.duckdns.org:64001',
   appname: 'Melodía',
   appversion: '0.4.0',
 };
