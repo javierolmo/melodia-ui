@@ -37,9 +37,8 @@ jobs:
   deploy:
     name: Deploy in server
     runs-on: ubuntu-latest
-    needs: publish_in_dockerhub
+    needs: build_and_publish
     steps:
-
       - name: Invoke deployment hook
         uses: distributhor/workflow-webhook@v2
         env:
