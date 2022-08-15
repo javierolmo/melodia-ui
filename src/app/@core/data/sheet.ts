@@ -3,13 +3,12 @@ import {Observable} from 'rxjs';
 export class Sheet {
     id: number;
     name: string;
-    style: string;
     date: string;
-    sheet: string;
+    ownerId: number;
     finished: boolean;
-    specs: boolean;
-    xml: boolean;
-    pdf: boolean;
+    specsPath: string;
+    xmlPath: string;
+    pdfPath: string;
 }
 
 export interface SheetPage {

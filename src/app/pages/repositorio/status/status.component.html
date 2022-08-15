@@ -1,8 +1,8 @@
-<span *ngIf="sheet.finished && sheet.pdf && sheet.xml && sheet.specs">
+<span *ngIf="sheet.finished && isPDFAvailable() && isXMLAvailable() && isSpecsAvailable()">
     <nb-icon status="success" icon="checkmark-outline"></nb-icon>
 </span>
 
-<span *ngIf="sheet.finished && (!sheet.pdf || !sheet.xml || !sheet.specs)">
+<span *ngIf="sheet.finished && (!isPDFAvailable() || !isXMLAvailable() || !isSpecsAvailable())">
     <nb-icon status="danger" icon="alert-triangle-outline"></nb-icon>
     <button class="mx-2" nbButton ghost shape="round" nbTooltip="Reintentar" (click)="retry(sheet.id)">
         <nb-icon icon="sync-outline"></nb-icon>

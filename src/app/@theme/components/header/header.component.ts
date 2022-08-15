@@ -2,8 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService } from '@nebular/theme';
 import { map, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-import {UserService} from '../../../@core/utils/user.service';
-import {UserData} from "../../../@core/data/user";
+import {UserData} from '../../../@core/data/user';
 
 @Component({
   selector: 'ngx-header',

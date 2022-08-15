@@ -24,6 +24,18 @@ export class StatusComponent implements OnInit {
         this.refresher = interval(2000).subscribe((x => this.refresh()));
     }
 
+    isXMLAvailable(): boolean {
+      return this.sheet.xmlPath != null && this.sheet.xmlPath.length > 0;
+    }
+
+    isPDFAvailable(): boolean {
+      return this.sheet.pdfPath != null && this.sheet.pdfPath.length > 0;
+    }
+
+    isSpecsAvailable(): boolean {
+      return this.sheet.specsPath != null && this.sheet.specsPath.length > 0;
+    }
+
     retry(id: number) {
         this.sheetService.retry(this.sheet.id).subscribe(
             result => {

@@ -29,6 +29,18 @@ export class DownloadDialogComponent implements OnInit {
     this.dialogRef.close();
   }
 
+  isXMLAvailable(): boolean {
+    return this.sheet.xmlPath != null && this.sheet.xmlPath.length > 0;
+  }
+
+  isPDFAvailable(): boolean {
+    return this.sheet.pdfPath != null && this.sheet.pdfPath.length > 0;
+  }
+
+  isSpecsAvailable(): boolean {
+    return this.sheet.specsPath != null && this.sheet.specsPath.length > 0;
+  }
+
   close() {
     this.dialogRef.close();
   }

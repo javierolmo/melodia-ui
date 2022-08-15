@@ -6,12 +6,12 @@ import {of} from 'rxjs';
 export class SheetMockService extends SheetData {
 
   private sheets: Sheet[] = [
-    {id: 1, name: 'Mock Sheet 1', date: '25/09/2021', finished: true, style: 'Boogie Woogie', sheet: '????', specs: true, xml: true, pdf: true},
-    {id: 2, name: 'Mock Sheet 2', date: '25/09/2021', finished: false, style: 'Boogie Woogie', sheet: '????', specs: true, xml: true, pdf: true},
-    {id: 3, name: 'Mock Sheet 3', date: '25/09/2021', finished: true, style: 'Boogie Woogie', sheet: '????', specs: false, xml: false, pdf: false},
-    {id: 4, name: 'Mock Sheet 4', date: '25/09/2021', finished: true, style: 'Boogie Woogie', sheet: '????', specs: true, xml: true, pdf: true},
-    {id: 5, name: 'Mock Sheet 5', date: '25/09/2021', finished: true, style: 'Boogie Woogie', sheet: '????', specs: true, xml: true, pdf: true},
-    {id: 6, name: 'Mock Sheet 6', date: '25/09/2021', finished: true, style: 'Boogie Woogie', sheet: '????', specs: true, xml: true, pdf: true},
+    {id: 1, name: 'Mock Sheet 1', date: '25/09/2021', finished: true, ownerId: 1, specsPath: 'true', xmlPath: 'true', pdfPath: 'true'},
+    {id: 2, name: 'Mock Sheet 2', date: '25/09/2021', finished: false, ownerId: 1, specsPath: 'true', xmlPath: 'true', pdfPath: 'true'},
+    {id: 3, name: 'Mock Sheet 3', date: '25/09/2021', finished: true, ownerId: 1, specsPath: 'false', xmlPath: 'false', pdfPath: 'false'},
+    {id: 4, name: 'Mock Sheet 4', date: '25/09/2021', finished: true, ownerId: 1, specsPath: 'true', xmlPath: 'true', pdfPath: 'true'},
+    {id: 5, name: 'Mock Sheet 5', date: '25/09/2021', finished: true, ownerId: 1, specsPath: 'true', xmlPath: 'true', pdfPath: 'true'},
+    {id: 6, name: 'Mock Sheet 6', date: '25/09/2021', finished: true, ownerId: 1, specsPath: 'true', xmlPath: 'true', pdfPath: 'true'},
   ];
 
   private sheetPage: SheetPage = {
@@ -57,9 +57,9 @@ export class SheetMockService extends SheetData {
     selected.finished = false;
 
     setTimeout(value => {
-      selected.pdf = true;
-      selected.specs = true;
-      selected.pdf = true;
+      selected.pdfPath = 'true';
+      selected.specsPath = 'true';
+      selected.xmlPath = 'true';
       selected.finished = true;
     }, 5000);
 
